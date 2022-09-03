@@ -41,11 +41,11 @@ app.post("/", function (req, res) {
   
   const request = https.request(url, options, function (response) {
     if(response.statusCode === 200){
-        res.sendfile(__dirname + "/success.html")
+        res.sendFile(__dirname + "/success.html")
       //sending sucess on code 200
     }
     else{
-        res.sendfile(__dirname + "/failure.html")
+        res.sendFile(__dirname + "/failure.html")
         //sending failure if something goes wrong
     }
     response.on("data", function (data) {
