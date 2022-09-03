@@ -61,7 +61,7 @@ app.post("/", function (req, res) {
 app.post("/failure",function(req,res){
   res.redirect("/")
 })
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("the server is on 3000 bitches"); //making local server 3000
 });
 // -us8
